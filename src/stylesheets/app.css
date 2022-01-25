@@ -1,0 +1,112 @@
+.favourites{
+    position: absolute;
+    width: 50%;
+    z-index: 14;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100%;
+    transition: 0.8s ease-in-out;
+    opacity: 0;
+}
+.favourites.active{
+    top: 10%;
+    opacity: 1;
+}
+
+.suggeted_details{
+    display: flex;
+}
+
+.messages{
+    position: absolute;
+    width: 900px;
+    z-index: 14;
+    left: 60%;
+    transform: translateX(-50%);
+    top: -100%;
+    transition: 0.8s ease-in-out;
+    opacity: 0;
+}
+
+.message{
+    width: 50%;
+  }
+.messages.active{
+    top: 10%;
+    opacity: 1;
+}
+.notifications{
+    position: absolute;
+    width: max-content;
+    z-index: 14;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100%;
+    transition: 0.8s ease-in-out;
+    opacity: 0;
+}
+.notifications.active{
+    top: 10%;
+    opacity: 1;
+}
+
+@media screen and (max-width:1200px){
+.favourites{
+  width: 60%;
+}
+
+}
+
+@media screen and (max-width:1000px){
+    .favourites{
+      width: 80%;
+    }
+    
+    }
+
+
+
+@media screen and (max-width:800px){
+    .messages{
+        position: absolute;
+        width: 98%;
+        max-width: 500px;
+        z-index: 14;
+        top: -100%;
+        left: 0;
+        transform: translateX(0);
+        transition: 0.8s ease-in-out;
+        opacity: 0;
+    }
+
+    .message{
+        width: 100%;
+        margin: 0;
+        margin-left: 0.3em;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .notifications_container{
+        width: 98%;
+          max-width: 500px;
+          
+
+      }
+
+      .notifications{
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .favourites{
+        width: 90%;
+      }
+
+      .suggeted_details{
+          display: none;
+      }
+      
+      
+}

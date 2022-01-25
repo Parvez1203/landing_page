@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+
+.main_icon{
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  overflow-x: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family:'Montserrat', sans-serif;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+  
+
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+
+
+.MuiTypography-gutterBottom {
+  border-bottom: 2px solid white;
+  width: 175px;
+  margin-bottom: 0.35em;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.class{
+  word-break: break-word;
+  overflow: hidden;
+  overflow-y: scroll;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px; /* fallback */
+  max-height: 32px; /* fallback */
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 128, 0); 
+}
+
+
