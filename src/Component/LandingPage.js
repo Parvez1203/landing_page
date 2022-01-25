@@ -16,12 +16,11 @@ function LandingPage() {
   const [forgotPassActive, setForgotPassActive] = useState(false);
   const [errorMsg, setErrorMsg] = useState();
 
-  // nav links 
+  // nav links
   const [homeActive, setHomeActive] = useState(true);
   const [featuresActive, setfeaturesActive] = useState(false);
   const [faqActive, setfaqActive] = useState(false);
   const [priceActive, setpriceActive] = useState(false);
-
 
   const checkMentorKey = (e) => {
     setErrorMsg("invalid Key!");
@@ -87,17 +86,96 @@ function LandingPage() {
   ) : null;
 
   return (
-    <div className="landing_page_container">
-      <div className="hyperLinks">
-        <span className="link" style={homeActive ? { color: "black",fontWeight:"bold",paddingRight:"0.4em",borderBottom:"3px solid #5454D4" } : null} onClick={()=>{setHomeActive(true);setfaqActive(false);setfeaturesActive(false);setpriceActive(false)}}>
-          Home
-
-          
+    <div className="landing_page_container" id="1st">
+      <div className="hyperLinks" >
+        <span
+          className="link"
+          style={
+            homeActive
+              ? {
+                  color: "black",
+                  fontWeight: "bold",
+                  paddingRight: "0.4em",
+                  borderBottom: "3px solid #5454D4",
+                }
+              : null
+          }
+          onClick={() => {
+            setHomeActive(true);
+            setfaqActive(false);
+            setfeaturesActive(false);
+            setpriceActive(false);
+          }}
+        >
+          <a href="#1st" style={{ textDecoration: "none", color: "inherit" }}>
+            Home
+          </a>
         </span>
-        
-        <span className="link" style={featuresActive ? { color: "black",fontWeight:"bold",paddingRight:"0.4em",borderBottom:"3px solid #5454D4" } : null} onClick={()=>{setHomeActive(false);setfaqActive(false);setfeaturesActive(true);setpriceActive(false)}}> Features</span>
-        <span className="link" style={faqActive ? { color: "black",fontWeight:"bold",paddingRight:"0.4em",borderBottom:"3px solid #5454D4" } : null} onClick={()=>{setHomeActive(false);setfaqActive(true);setfeaturesActive(false);setpriceActive(false)}}>FAQs</span>
-        <span className="link" style={priceActive ? { color: "black",fontWeight:"bold",paddingRight:"0.4em",borderBottom:"3px solid #5454D4" } : null} onClick={()=>{setHomeActive(false);setfaqActive(false);setfeaturesActive(false);setpriceActive(true)}}>Pricing</span>
+
+        <span
+          className="link"
+          style={
+            featuresActive
+              ? {
+                  color: "black",
+                  fontWeight: "bold",
+                  paddingRight: "0.4em",
+                  borderBottom: "3px solid #5454D4",
+                }
+              : null
+          }
+          onClick={() => {
+            setHomeActive(false);
+            setfaqActive(false);
+            setfeaturesActive(true);
+            setpriceActive(false);
+          }}
+        >
+          {" "}
+          <a href="#2nd" style={{textDecoration:"none",color:"inherit"}}>Features</a>
+        </span>
+        <span
+          className="link"
+          style={
+            faqActive
+              ? {
+                  color: "black",
+                  fontWeight: "bold",
+                  paddingRight: "0.4em",
+                  borderBottom: "3px solid #5454D4",
+                }
+              : null
+          }
+          onClick={() => {
+            setHomeActive(false);
+            setfaqActive(true);
+            setfeaturesActive(false);
+            setpriceActive(false);
+          }}
+        >
+          <a href="#3rd" style={{textDecoration:"none",color:"inherit"}}>FAQs</a>
+        </span>
+        <span
+          className="link"
+          style={
+            priceActive
+              ? {
+                  color: "black",
+                  fontWeight: "bold",
+                  paddingRight: "0.4em",
+                  borderBottom: "3px solid #5454D4",
+                }
+              : null
+          }
+          onClick={() => {
+            setHomeActive(false);
+            setfaqActive(false);
+            setfeaturesActive(false);
+            setpriceActive(true);
+          }}
+        >
+          <a href="#4th" style={{textDecoration:"none",color:"inherit"}}>Pricing</a>
+        </span>
         {loginActive ? (
           <div
             className="signup_now_btn"
@@ -125,21 +203,19 @@ function LandingPage() {
           </div>
         ) : null}
 
-{forgotPassActive ? (
+        {forgotPassActive ? (
           <div
-          className="signup_now_btn"
-          style={{ backgroundColor: "rgba(4, 195, 92, 1)" }}
-          onClick={() => {
-            setLoginActive(true);
-            setSignupActive(false);
-            setForgotPassActive(false);
-          }}
-        >
-          Login now
-        </div>
+            className="signup_now_btn"
+            style={{ backgroundColor: "rgba(4, 195, 92, 1)" }}
+            onClick={() => {
+              setLoginActive(true);
+              setSignupActive(false);
+              setForgotPassActive(false);
+            }}
+          >
+            Login now
+          </div>
         ) : null}
-
-
       </div>
 
       <div className="socio_links_div">
@@ -279,13 +355,10 @@ function LandingPage() {
                 className="inputs"
                 placeholder="example@gmail.com"
               />
-              
-              
             </div>
-            <div className="google-button" style={{marginTop:"0.5em"}}>
+            <div className="google-button" style={{ marginTop: "0.5em" }}>
               <p className="txt-255">Send me password</p>
             </div>
-            
           </div>
         ) : null}
 
@@ -743,7 +816,7 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="FAQs_text">FAQs</div>
+      <div className="FAQs_text" id="3rd">FAQs</div>
 
       <div className="FAQ_images">
         <div className="FAQ_img_box">
@@ -759,39 +832,57 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="plans_text">Get the right plan for future Goals </div>
+      <div className="plans_text" id="4th">Get the right plan for future Goals </div>
 
       <div className="cards_container">
         <div className="free_plan_container">
-              <span className="txt_100">Starter</span>
+          <span className="txt_100">Starter</span>
 
-              <span className="txt_200">Free</span>
+          <span className="txt_200">Free</span>
 
-              <span className="txt_101">Community Asks</span>
+          <span className="txt_101">Community Asks</span>
 
-              <span className="txt_101">24/7 Help</span>
+          <span className="txt_101">24/7 Help</span>
 
-              <span className="txt_101">Community Support</span>
+          <span className="txt_101">Community Support</span>
 
-              <div className="btn_free">
-                   Get started
-              </div>
+          <div className="btn_free">Get started</div>
         </div>
 
-        <div className="premium_plan_container" style={{background:"#4D403C"}}>
-              <span className="txt_100" style={{color:"#FFFFFFB2"}}>Premium</span>
+        <div
+          className="premium_plan_container"
+          style={{ background: "#4D403C" }}
+        >
+          <span className="txt_100" style={{ color: "#FFFFFFB2" }}>
+            Premium
+          </span>
 
-              <span className="txt_200" style={{fontSize:"45px",color:"#FFFFFF"}}> <span style={{fontSize:"65px"}}>$3</span>/question</span>
+          <span
+            className="txt_200"
+            style={{ fontSize: "45px", color: "#FFFFFF" }}
+          >
+            {" "}
+            <span style={{ fontSize: "65px" }}>$3</span>/question
+          </span>
 
-              <span className="txt_101" style={{color:"#FFFFFF"}}>Ask Expert</span>
+          <span className="txt_101" style={{ color: "#FFFFFF" }}>
+            Ask Expert
+          </span>
 
-              <span className="txt_101" style={{color:"#FFFFFF"}}>Custom support</span>
+          <span className="txt_101" style={{ color: "#FFFFFF" }}>
+            Custom support
+          </span>
 
-              <span className="txt_101" style={{color:"#FFFFFF"}}>Premium Support</span>
+          <span className="txt_101" style={{ color: "#FFFFFF" }}>
+            Premium Support
+          </span>
 
-              <div className="btn_free" style={{background:"#1B1514",color:"white"}}>
-                   Get started
-              </div>
+          <div
+            className="btn_free"
+            style={{ background: "#1B1514", color: "white" }}
+          >
+            Get started
+          </div>
         </div>
       </div>
     </div>
